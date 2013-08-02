@@ -34,7 +34,7 @@ The 'Plugin Display Objects' may also be added directly onto your template or ev
 
 **CFML Method**
 
-	#$.disqus(mgcURL='YourDisqusShortname')#
+	#$.disqus('YourDisqusShortnameGoesHere')#
 
 
 ##Tested With
