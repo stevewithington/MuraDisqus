@@ -26,7 +26,7 @@ component accessors=true extends='mura.cfobject' output=false {
 		if ( !StructKeyExists(variables, '$') 
 			|| !Len(arguments.disqusShortname) 
 			|| ListFindNoCase('portal,folder,calendar', $.content('type')) 
-			|| variables.$.event('muraDiscussExists') == true
+			|| variables.$.event('muraDisqusExists') == true
 		) {
 			return '';
 		}
@@ -46,7 +46,7 @@ component accessors=true extends='mura.cfobject' output=false {
 			include 'includes/muraDisqus.cfm';
 		};
 
-		variables.$.event('muraDiscussExists',true);
+		variables.$.event('muraDisqusExists',true);
 		variables.$.commitTracePoint(local.tracePoint);
 
 		return local.str;
