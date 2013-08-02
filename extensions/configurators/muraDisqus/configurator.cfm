@@ -12,8 +12,6 @@
 		application.serviceFactory.getBean('$').init('session.siteid') : 
 		application.serviceFactory.getBean('$').init('default');
 
-	rbFactory = application.MuraGoogleCalendar.getResourceBundleFactory($);
-
 	params = IsJSON($.event('params')) ? DeSerializeJSON($.event('params')) : {};
 	defaultParams = {
 		disqusShortname = ''
